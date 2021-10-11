@@ -6,15 +6,15 @@ const nodemailer = require('nodemailer')
 
 const sendEmailUser = async (req, res)=>{
     console.log(req.body)
-    const {name, email, subject, message} = req.body;
+    const {name, email, phone, subject, message} = req.body;
     try {
         contentHTML = `
             <h1>Información de usuario</h1>
             <ul>
                 <li>Nombre: ${name}</li>
                 <li>Email: ${email}</li>
+                <li>Teléfono: ${phone}</li>
             </ul>
-            <br />
             <br />
             <p>
             ${message}
@@ -26,7 +26,7 @@ const sendEmailUser = async (req, res)=>{
             secure: true,
             auth: {
                 user: 'spaceapps@spaceapps.com.ar',
-                pass: ';zwHPn7G7;r5R9'
+                pass: '#EnzoNico2021_'
             },
             tls: {
                 rejectUnauthorized: false
