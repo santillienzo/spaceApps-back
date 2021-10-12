@@ -26,7 +26,7 @@ const sendEmailUser = async (req, res)=>{
             secure: true,
             auth: {
                 user: 'spaceapps@spaceapps.com.ar',
-                pass: '#EnzoNico2021_'
+                pass: process.env.PASSWORD
             },
             tls: {
                 rejectUnauthorized: false
