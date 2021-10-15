@@ -19,6 +19,7 @@ mongoose.connect(process.env.DATABASE,{
 
 //ROUTES
 app.use('/email', require('./routes/email'));
+app.use('/admin', require('./routes/adminAuth'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
