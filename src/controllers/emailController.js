@@ -68,6 +68,7 @@ exports.createEmails = (req, res)=>{
 exports.readEmails = (req, res)=>{
     Email.find().exec((err, data)=>{
         if (err) {
+            console.log("LLAMADA A LOS CORREOS")
             return res.status(400).json({
                 error: errorHandler(err)
             })
