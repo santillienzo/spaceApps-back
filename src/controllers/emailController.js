@@ -55,6 +55,7 @@ exports.createEmails = (req, res)=>{
     const email = new Email(req.body);
     email.save((err, data)=>{
         if(err){
+            console.log("Error " + err)
             return res.status(400).json({
                 error: `Aquí hay un error => ${errorHandler(err)}`
             })
