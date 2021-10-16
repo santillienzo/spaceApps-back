@@ -56,7 +56,7 @@ exports.createEmails = (req, res)=>{
     email.save((err, data)=>{
         if(err){
             return res.status(400).json({
-                error: errorHandler(err)
+                error: `Aquí hay un error => ${errorHandler(err)}`
             })
         }
         res.json({data})
