@@ -15,7 +15,7 @@ app.use(cors());
 mongoose.connect(process.env.DATABASE,{
     useNewUrlParser: true,
     useUnifiedTopology: true
-}).then(()=>console.log('Successfully conection'))
+}).then(()=>console.log('Database conected'))
 
 //ROUTES
 app.use('/email', require('./routes/email'));
